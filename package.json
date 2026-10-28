@@ -18,6 +18,7 @@
   "homepage": "https://github.com/diephwg/e2e-playwright-study#readme",
   "devDependencies": {
     "@playwright/test": "^1.64.1",
-    "@types/node": "^26.6.5"
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15"
   }
 }

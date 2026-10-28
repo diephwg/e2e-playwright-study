@@ -1,18 +1,15 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('thêm 2 việc to do vào list => đếm có 2 việc', async({page}) => {
+  await page.goto('https://demo.playwright.dev/todomvc/#/')
+  const input =  page.getByPlaceholder('What needs to be done?')
+  await input.fill('playwright learning')
+  await input.press('Enter')
+  await input.fill('playwright testing')
+  await input.press('Enter')
+  await expect(page.getByTestId('todo-item')).toHaveCount(2);
+})
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
+test('thêm 1 việc rồi tick checkbox, kiểm tra việc đó đã đổi trạng thái hoàn thành hay chưa', async ({page}) => {
+  
+})

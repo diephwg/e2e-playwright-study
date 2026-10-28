@@ -138,7 +138,7 @@ Khi lỗi xuất hiện, đọc theo thứ tự:
 
 1. Viết hàm `tinhTong(ds: number[]): number` cộng mọi số trong mảng.
 2. Viết hàm `taoEmail(): string` trả về email dạng `test_<timestamp>@mail.com`.
-3. Cho mảng `['Mua sữa', 'Học Playwright', 'Đi chợ']`, in ra những phần tử dài hơn 8 ký tự bằng `filter`.
+3. Cho mảng `['Mua sữa', 'Học Playwright', 'Đi chợ', 'nấu cơm tối nay']`, in ra những phần tử dài hơn 8 ký tự bằng `filter`.
 4. Giải thích bằng lời: vì sao đoạn sau sai?
    ```ts
    function mo() {
